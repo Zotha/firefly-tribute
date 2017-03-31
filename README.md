@@ -1,6 +1,8 @@
 # firefly-tribute
 Test code for my FCC tribute project
 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+
 <!-- tabs -->
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
