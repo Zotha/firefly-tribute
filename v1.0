@@ -16,13 +16,12 @@
 
 <style>
 
+
 /* attributes of background img */
 #bg img {
   position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%;
+  top: -50%;
+  width: 100%;
   background-repeat: no-repeat;
   z-index: -1
 }
@@ -57,6 +56,7 @@ takes img back to 100% */
   border-radius: 1%;
   position: absolute;
   top: 0; 
+  left: 0;
   block-align: left;
 }
 
@@ -78,26 +78,30 @@ takes img back to 100% */
   font-family: "Eagle Lake", cursive;
   color: #4c0606;
   text-align: center;
-  clear: both;
+  border-top: 3px double #4c0606;
   border-bottom: 3px double #4c0606;
   padding-bottom: 12px;
+}
+
+.line {
+  border-bottom: 3px double #4c0606;
+}
+
+.sideline {
+  border-right: 3px double #4c0606;
+  padding-right: 25px;
 }
 
 .title {
   font-family: "Eagle Lake", cursive;
   color: #4c0606;
+  font-size: 1.6em;
+  margin-top: 10px;
 }
 
-.logo-left {
-  float: left;
+.logo {
   border: solid 2px #4c0606;
-  margin-right: 5px;
-}
-
-.logo-right {
-  float: right;
-  border: solid 2px #4c0606;
-  margin-left: 9px;
+  margin-top: 20px;
 }
 
 p {
@@ -105,11 +109,6 @@ p {
   font-family: "Kaushan Script", cursive;
   font-size: 1.5em;
   color: #4c0606;
-}
-
-.line {
-  border-bottom: 3px double #4c0606;
-  padding-bottom: 12px;
 }
 
 a:link {
@@ -123,15 +122,18 @@ a:hover {
 }
 
 
+
+
 /* Portrait and Landscape */
 @media only screen 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
     
     .ff-center {
-      min-width: 100%;
-      margin-left: 0px;
-      padding-left: 0px;
+      min-width: 90%;
+      max-width: 100%;
+      margin: 0px;
+      padding: 0px;
     }
     
     .headline {
@@ -155,6 +157,8 @@ a:hover {
       block-align: left;
       margin-bottom: 10px;
     }
+    
+
 }
 </style>
 
@@ -172,41 +176,65 @@ a:hover {
   
   <div class="main">
     <p>If you ask a geek what the most depressing point in fandom history is, a good many of them will point to the death of cult classic Firefly. These people are called Browncoats, and their (our, if I'm being honest) love will never let the 'Verse truly die. We are part of it. We continue its brilliance and charm. And we will never let it become lost to time.</p>
-    <p class="line">In that vein, I thought the best way to continue the Firefly legacy was to make a tribute to all the groups that keep us in the air when we ought to fall out of the sky.</p>
+    <p>In that vein, I thought the best way to continue the Firefly legacy was to make a tribute to all the groups that keep us in the air when we ought to fall out of the sky.</p>
     
     <p class="headline">Groups</p>
     
-    <div id="svsa">
-    <a href="https://www.facebook.com/groups/serenityvalleysmugglersassociation/"> <img id="svsa-logo" src="http://i67.tinypic.com/ily7gw.png" class="logo-left"> </a>
-        <h3 class="title">Serenity Valley Smugglers Association</h3>
-      <p>Dedicated to the ongoing creation of fiction, films, art, music, articles, and other fan works that add to the canon and history of the 'Verse.</p>
-      <p class="line">The group is an international community, its leaders alone spanning the US, UK, and Australia. Their Teamspeak channel is popular for events such as the recent <a href="https://www.facebook.com/events/439850976361592/"> concert with the Bedlam Bards</a> and a good game of Cards Against Humanity. They are currently in the process of incorporating in order to better fund large fan projects.</p>
-    </div> <!-- close svsa -->
-    
-
-    <div id="ffo">
-      <a href="http://www.keepflying.com"> <img src="http://i67.tinypic.com/if506p.jpg" class="logo-right img img-responsive"> </a>
-        <h3 class="title">Firefly Online</h3>
-      <p class="line">The brainchild of <a href="http://www.sparkpluggames.com/">Spark Plug Games </a> and <a href="http:www.qmxonline.com">Quantum Mechanix</a>, Firefly Online was going to be an MMO of the most immersive nature. Boasting Whil Wheaton, Courtenay Taylor, and the entire original cast as voice actors, the game was set to launch in late 2018. It has, however, been under a gag order from FOX since early 2017. Fiction about the captains and ships each player would get to control sprouted up on <a href="http://forum.fireflyonline.website/index.php">the unofficial FFO Forum</a> and its associated wiki. Though the fate of the game is uncertain, the 'Verse lives on in their words.</p>
-    </div> <!-- close ffo -->
-        
-        <div id="utah">
-          <a href="http://utahbrowncoats.com/"><img src="http://i66.tinypic.com/ws05k7.jpg" class="logo-left img img-responsive"></a>
-          <h3 class="title">The Utah Browncoats</h3>
-          <p class="line">The Utah Browncoats are Firefly fans from all across the state of Utah and beyond.  They meet regularly at conventions and shindigs across the state and help raise money for charity and worthy causes. They are most notably involved with <a href="http://www.cantstoptheserenity.com/">Can't Stop the Serenity</a>, and their partnertship has raised many thousands of dollars for <a href="http://www.equalitynow.org/">Equality Now</a>. Utah's success has spurred on sister groups in Pennsylvania and North Carolina, both of which also participate in CSTS. The group also designs some seriously shiny patches.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <a href="https://www.facebook.com/groups/serenityvalleysmugglersassociation/"> <img src="http://i67.tinypic.com/ily7gw.png" class="logo img img-responsive"></a>
         </div>
+      
+        <div class="col-xs-8">
+            <p class="title">Serenity Valley Smugglers Association</p>
+          <p>Dedicated to the ongoing creation of fiction, films, art, music, articles, and other fan works that add to the canon and history of the 'Verse.</p>
+      <p>The group is an international community, its leaders alone spanning the US, UK, and Australia. Their Teamspeak channel is popular for events such as the recent <a href="https://www.facebook.com/events/439850976361592/"> concert with the Bedlam Bards</a> and a good game of Cards Against Humanity. They are currently in the process of incorporating in order to better fund large fan projects.</p>
+        </div>
+  </div><!--close row-->
+  
+      <p class="line"></p>
+      
+   <div class="row">
+        <div class="col-xs-8">
+          <p>The brainchild of <a href="http://www.sparkpluggames.com/">Spark Plug Games </a> and <a href="http:www.qmxonline.com">Quantum Mechanix</a>, Firefly Online was going to be an MMO of the most immersive nature. Boasting Whil Wheaton, Courtenay Taylor, and the entire original cast as voice actors, the game was set to launch in late 2018. It has, however, been under a gag order from FOX since early 2017. Fiction about the captains and ships each player would get to control sprouted up on <a href="http://forum.fireflyonline.website/index.php">the unofficial FFO Forum</a> and its associated wiki. Though the fate of the game is uncertain, the 'Verse lives on in their words.</p>
+     </div>
+     
+     <div class="col-xs-4">
+         <a href="http://www.keepflying.com"> <img src="http://i67.tinypic.com/if506p.jpg" class="logo img img-responsive"> </a>
+     </div>
+    </div><!--close row-->
+ 
+     <p class="line"></p>      
+
+    <div class="row">
+      <div class="col-xs-4">
+         <a href="http://utahbrowncoats.com/"><img src="http://i66.tinypic.com/ws05k7.jpg" class="logo img img-responsive"></a>
+      </div>
+      
+      <div class="col-xs-8">
+         <p>The Utah Browncoats are Firefly fans from all across the state of Utah and beyond.  They meet regularly at conventions and shindigs across the state and help raise money for charity and worthy causes. They are most notably involved with <a href="http://www.cantstoptheserenity.com/">Can't Stop the Serenity</a>, and their partnertship has raised many thousands of dollars for <a href="http://www.equalitynow.org/">Equality Now</a>. Utah's success has spurred on sister groups in Pennsylvania and North Carolina, both of which also participate in CSTS. The group also designs some seriously shiny patches.</p>
+      </div>
+    </div><!--close row-->
+  </div><!--close container-->
     
     <p class="headline">Entertainers</p>
-    
-<div id="bards">
-  <h3 class="title"><a href="http://www.bedlambards.com/">Bedlam Bards</a></h3>
-    <p>Anyone who has seen the fan's documentary <a href="http://www.donetheimpossible.com/about.php">Done the Impossible</a> will recognize the sweet strains of the Bards. They tour most of North America, leaving everyone in their wake humming the <a href="https://www.youtube.com/watch?v=Y4eKWN_eAxM">Ballad of Joss</a>.</p>
-  <div>
-    
-    <div id="balls-n-bayonets">
+  
+    <class="container">
+  <div class="row">
+  <div class="col-xs-6">
+    <p class="title"><a href="http://www.bedlambards.com/">Bedlam Bards</a></p>
+    <p class="sideline">Anyone who has seen the fan's documentary <a href="http://www.donetheimpossible.com/about.php">Done the Impossible</a> will recognize the sweet strains of the Bards. They tour most of North America, leaving everyone in their wake humming the <a href="https://www.youtube.com/watch?v=Y4eKWN_eAxM">Ballad of Joss</a>.</p>
+  </div>
+  
+   <div class="col-xs-6">
+     <div id="balls-n-bayonets">
       <h3 class="title"><a href="http://www.stitcher.com/podcast/firefly-podcast">Balls and Bayonets Brigade</a></h3>
       <p>A Firefly podcast about a pen-and-paper RPG, several episodes strong.</p>
-    </div>
+  </div>
+  </div><!--close row-->
+  </div><!--close container-->
+    
     
 
 
